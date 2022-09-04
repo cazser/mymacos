@@ -1,7 +1,8 @@
 <script setup>
-import { ref } from 'vue'
+import { reactive, ref } from 'vue'
 
 import Dock from './Dock.vue'
+const apps = reactive([]);
 </script>
 
 <template>
@@ -10,10 +11,15 @@ import Dock from './Dock.vue'
     <img src="../assets/apple.png">
     <ol>
       <li>文件</li>
+      <li>窗口</li>
+      <li>帮助</li>
     </ol>
   </header>
-  <Dock></Dock>
+  <Dock :apps=apps></Dock>
 <ol class="appcontainer">
+ <li v-for="app in apps">
+  {{app.text}}
+</li>
 </ol>
 </div> 
 </template>
@@ -36,6 +42,16 @@ import Dock from './Dock.vue'
 
   .desktop-header>img{
     max-height: 16px;
+  }
+
+  .desktop-header>ol{
+    display: flex;
+  }
+
+  .desktop-header li{
+    margin: 4px;
+    color: white;
+    font-size: 12px;
   }
 </style>
 

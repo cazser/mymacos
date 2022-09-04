@@ -1,14 +1,18 @@
-<script setup>
-import { ref } from 'vue'
+<script setup> 
 
-defineProps({
-  msg: String
+
+const props = defineProps({
+apps:Array
 })
-
 
 const ondockClick = (e)=>{
   console.log(e.target)
+  //console.log(context);
+  console.log(props.apps);
+  props.apps.push({text:11})
 }
+
+ 
 </script>
 
 <template>
