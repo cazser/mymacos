@@ -13,6 +13,12 @@ const count = ref(0)
       <li>
         <img src="../assets/finder.png">
       </li>
+      <li>
+        <img src="../assets/terminal.png">
+      </li>
+      <li>
+        <span>|</span>
+      </li>
     </ol>
 </template>
 
@@ -25,18 +31,18 @@ const count = ref(0)
   position: absolute;
   bottom: 10px;
   left:50%;
-  min-width:calc(100vw - 200px);
+  max-width:calc(100vw - 200px);
   transform: translateX(-50%);
-  border-radius: 5px;
+  border-radius: 10px;
   min-height: 40px;
   align-items: center;
 }
 li>img{
-  min-height: 64px;
+  max-height: 64px;
 }
 li{
   text-align: center;
-
+  margin-left: 10px;
 }
 
 li:hover{
