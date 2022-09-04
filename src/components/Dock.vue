@@ -5,11 +5,14 @@ defineProps({
   msg: String
 })
 
-const count = ref(0)
+
+const ondockClick = (e)=>{
+  console.log(e.target)
+}
 </script>
 
 <template>
-    <ol class="dock">
+    <ol class="dock" @click="ondockClick">
       <li>
         <img src="../assets/finder.png">
       </li>
@@ -24,6 +27,9 @@ const count = ref(0)
        </li>
        <li>
         <img src="../assets/settings.png">
+       </li>
+       <li>
+        <img src="../assets/terminal.png">
        </li>
     </ol>
 </template>
