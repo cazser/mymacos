@@ -19,9 +19,12 @@ const count = ref(0)
       <li>
         <img src="../assets/mails.png">
       </li>
-      <li>
-        <span>|</span>
-      </li>
+       <li>
+        <img src="../assets/safari.png">
+       </li>
+       <li>
+        <img src="../assets/settings.png">
+       </li>
     </ol>
 </template>
 
