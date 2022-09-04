@@ -22,7 +22,7 @@ const count = ref(0)
   border: 10px solid;
   color: aqua;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   position: absolute;
   bottom: 0;
   left:50%;
