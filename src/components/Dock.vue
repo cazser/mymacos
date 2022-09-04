@@ -10,24 +10,38 @@ const count = ref(0)
 
 <template>
     <ol class="dock">
-      <li>1</li>
-      <li>2</li>
-      <li>3</li>
+      <li>
+        <img src="../assets/finder.png">
+      </li>
     </ol>
 </template>
 
 <style scoped>
 
 .dock{
-  border: 10px solid;
-  color: aqua;
+  background-color: rgba(133,133, 133, 0.3);
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   position: absolute;
-  bottom: 0;
+  bottom: 10px;
   left:50%;
-  min-width: 800px;
+  min-width:calc(100vw - 200px);
   transform: translateX(-50%);
+  border-radius: 5px;
+  min-height: 40px;
+  align-items: center;
 }
+li>img{
+  min-height: 64px;
+}
+li{
+  text-align: center;
+
+}
+
+li:hover{
+  transform:scale(2)
+}
+
 </style>
 
