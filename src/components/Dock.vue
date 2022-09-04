@@ -14,7 +14,10 @@ const count = ref(0)
         <img src="../assets/finder.png">
       </li>
       <li>
-        <img src="../assets/terminal.png">
+        <img src="../assets/launchpad.png">
+      </li>
+      <li>
+        <img src="../assets/mails.png">
       </li>
       <li>
         <span>|</span>
@@ -29,7 +32,7 @@ const count = ref(0)
   display: flex;
   justify-content: space-between;
   position: absolute;
-  bottom: 10px;
+  bottom: 40px;
   left:50%;
   max-width:calc(100vw - 200px);
   transform: translateX(-50%);
@@ -42,11 +45,11 @@ li>img{
 }
 li{
   text-align: center;
-  margin-left: 10px;
+  margin-left: 8px;
 }
 
 li:hover{
-  transform:scale(2)
+  transform:scale(1.5)
 }
 
 </style>

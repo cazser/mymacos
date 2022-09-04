@@ -1,9 +1,7 @@
 <script setup>
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import HelloWorld from './components/HelloWorld.vue'
-import Dock from './components/Dock.vue'
+import Desktop from './components/Desktop.vue'
 import { ref } from 'vue';
+
 const timer = ref(0);
 const isLoading = ref(true);
 const intervalId = setInterval(()=>{
@@ -24,10 +22,11 @@ setTimeout(()=>{
     </div>
   </div>
 </div>
-<div v-if="!isLoading" class="desktop">
+<Desktop v-if="!isLoading">
   
-  <Dock></Dock>
-</div> 
+</Desktop>
+
+ 
 </template>
 
 <style scoped>
@@ -63,10 +62,6 @@ setTimeout(()=>{
   background: black;
   display: block;
 }
-  .desktop{
-    min-height: 100vh;
-    position: relative;
-    background-image: url('./assets/wellpapers/3-1.jpg');
-  }
+ 
 
 </style>
