@@ -1,8 +1,16 @@
 <script setup>
-import { reactive, ref } from 'vue'
+import { onUnmounted, reactive, ref } from 'vue'
 
 import Dock from './Dock.vue'
 const apps = reactive([]);
+let newDate = reactive(new Date());
+let intervalId = setInterval(()=>{
+  newDate = reactive(new Date());
+
+}, 1000);
+onUnmounted(()=>{
+  window.clearInterval(intervalId)
+})
 </script>
 
 <template>
@@ -14,6 +22,11 @@ const apps = reactive([]);
       <li>窗口</li>
       <li>帮助</li>
     </ol>
+    <span class="time">
+      {{newDate.getHours()>10? newDate.getHours(): 
+      '0'+ newDate.getHours()}}:{{newDate.getMinutes()>10?
+       newDate.getMinutes(): '0'+newDate.getMinutes()}}
+    </span>
   </header>
   <Dock :apps=apps></Dock>
 <ol class="appcontainer">
@@ -38,8 +51,13 @@ const apps = reactive([]);
     display: flex;
     background: rgba(255, 255, 255, 0.5);
     align-items: center;
+    position: relative;
   }
 
+  .time{
+    position: absolute;
+    right: 20px;
+  }
   .desktop-header>img{
     max-height: 16px;
   }
