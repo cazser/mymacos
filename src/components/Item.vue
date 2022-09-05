@@ -3,15 +3,22 @@ import { ref } from 'vue'
 
 const props =defineProps({
  src: String,
- command: String
+ command: String,
+ apps:Array
 })
 
-const count = ref(0)
+const onClick = (e)=>{
+  console.log("item click")
+   console.log(e.target)
+  //console.log(context);
+  //console.log(props.apps);
+  props.apps.push({parameters:11})
+}
 </script>
 
 
 <template>
-  <div>
+  <div @click="onClick">
     <slot></slot>
   </div>
 </template>

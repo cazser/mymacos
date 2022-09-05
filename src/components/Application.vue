@@ -1,11 +1,20 @@
-<script setup>
+<script>
+import { defineComponent } from 'vue';
 import { onMounted, ref } from 'vue'
-const props = defineProps({
-  parameters: Object
-})
-onMounted(()=>{
-  console.log(props.parameters);
-})
+export default
+  
+    {
+      setup:(props, context)=>{
+      
+      onMounted(()=>{
+      console.log(props);
+      })
+      return {}
+
+      }
+    }
+  
+
 
 </script>
 

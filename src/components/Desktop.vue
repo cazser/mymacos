@@ -29,10 +29,12 @@ onUnmounted(()=>{
        newDate.getMinutes(): '0'+newDate.getMinutes()}}
     </span>
   </header>
+
   <Dock :apps=apps></Dock>
 <ol class="appcontainer">
  <li v-for="app in apps">
-  <Application parameter="app"/>
+  {{app}}
+  <Application :parameters="app.parameter"/>
 </li>
 </ol>
 </div> 
