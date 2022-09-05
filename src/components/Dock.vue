@@ -1,6 +1,7 @@
 <script setup> 
 
 
+import Item from './Item.vue';
 const props = defineProps({
 apps:Array
 })
@@ -8,7 +9,7 @@ apps:Array
 const ondockClick = (e)=>{
   console.log(e.target)
   //console.log(context);
-  console.log(props.apps);
+  //console.log(props.apps);
   props.apps.push({text:11})
 }
 
@@ -18,22 +19,34 @@ const ondockClick = (e)=>{
 <template>
     <ol class="dock" @click="ondockClick">
       <li>
-        <img src="../assets/finder.png">
+        <Item>
+          <img src="../assets/finder.png"/>
+        </Item>
       </li>
       <li>
-        <img src="../assets/launchpad.png">
+        <Item>
+          <img src="../assets/launchpad.png">
+        </Item>
       </li>
       <li>
-        <img src="../assets/mails.png">
+        <Item>
+          <img src="../assets/mails.png">
+        </Item>
       </li>
        <li>
-        <img src="../assets/safari.png">
+        <Item>
+          <img src="../assets/safari.png">
+        </Item>
        </li>
        <li>
-        <img src="../assets/settings.png">
+        <Item>
+          <img src="../assets/settings.png">
+        </Item>
        </li>
        <li>
-        <img src="../assets/terminal.png">
+        <Item>
+          <img src="../assets/terminal.png">
+        </Item>
        </li>
     </ol>
 </template>

@@ -1,6 +1,11 @@
 <script setup>
-import { ref } from 'vue'
-
+import { onMounted, ref } from 'vue'
+const props = defineProps({
+  parameters: Object
+})
+onMounted(()=>{
+  console.log(props.parameters);
+})
 
 </script>
 
@@ -14,7 +19,8 @@ import { ref } from 'vue'
 
 <style scoped>
  .wrapper{
-  border: 1px sold;
+  border: 2px solid red;
+  min-height: 100px;
  }
 </style>
 

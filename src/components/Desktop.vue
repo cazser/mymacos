@@ -2,6 +2,7 @@
 import { onUnmounted, reactive, ref } from 'vue'
 
 import Dock from './Dock.vue'
+import Application from './Application.vue';
 const apps = reactive([]);
 let newDate = reactive(new Date());
 let intervalId = setInterval(()=>{
@@ -31,7 +32,7 @@ onUnmounted(()=>{
   <Dock :apps=apps></Dock>
 <ol class="appcontainer">
  <li v-for="app in apps">
-  {{app.text}}
+  <Application parameter="app"/>
 </li>
 </ol>
 </div> 
