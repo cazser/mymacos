@@ -17,6 +17,10 @@ onMounted(()=>{
     <button class="min primary-three-button"></button>
     <button class="max primary-three-button"></button>
   </header>
+  <main>
+    <slot></slot>
+    
+  </main>
   </div>
  
 </template>

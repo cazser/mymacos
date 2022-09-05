@@ -5,4 +5,4 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 ## Recommended IDE Setup
 
 - [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
-想使用mac
+2022/9/5-- 16:37 怎么实现应用程序，怎么实现程序的安装这是一个问题还没有解决，可拖曳没解决
