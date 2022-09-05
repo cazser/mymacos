@@ -1,6 +1,7 @@
 <script>
 import { defineComponent } from 'vue';
 import { onMounted, ref } from 'vue'
+import { RouterView } from 'vue-router';
 export default
   
     {
@@ -9,6 +10,7 @@ export default
       onMounted(()=>{
       console.log(props);
       })
+      
       return {}
 
       }
@@ -27,8 +29,7 @@ export default
     <button class="max primary-three-button"></button>
   </header>
   <main>
-    <slot></slot>
-    
+    <router-view></router-view>    
   </main>
   </div>
  
