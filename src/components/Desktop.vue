@@ -37,7 +37,7 @@ onUnmounted(()=>{
  <li v-for="app in apps">
   
   <Application :parameters="app.parameter">
-    
+    <router-view></router-view>  
   </Application>
 </li>
 </ol>
