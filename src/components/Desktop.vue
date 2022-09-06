@@ -30,6 +30,7 @@ onUnmounted(()=>{
     </span>
   </header>
   <Application >
+    <router-view></router-view>
   </Application>
   <Dock :apps=apps></Dock>
 <ol class="appcontainer">

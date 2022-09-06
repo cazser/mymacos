@@ -29,7 +29,7 @@ export default
     <button class="max primary-three-button"></button>
   </header>
   <main>
-    <router-view></router-view>    
+    <slot></slot>    
   </main>
   </div>
  
