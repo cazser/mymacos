@@ -1,6 +1,6 @@
 <script setup> 
 
-
+import Terminal from '../Applications/Terminal.vue'
 import Item from './Item.vue';
 const props = defineProps({
 apps:Array
@@ -21,7 +21,7 @@ const ondockClick = (e)=>{
         </Item>
       </li>
       <li>
-        <Item :apps=apps>
+        <Item :apps=apps >
           <img src="../assets/launchpad.png">
         </Item>
       </li>
@@ -41,7 +41,7 @@ const ondockClick = (e)=>{
         </Item>
        </li>
        <li>
-        <Item :apps=apps>
+        <Item :apps=apps >
           <img src="../assets/terminal.png">
         </Item>
        </li>
