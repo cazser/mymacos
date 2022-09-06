@@ -10,8 +10,12 @@ export default
       onMounted(()=>{
       console.log(props.parameter);
       })
-      
-      return {}
+      const onCloseClick =()=>{
+        console.log("close.button")
+      }      
+      return {
+        onCloseClick
+      }
 
       }
     }
@@ -24,7 +28,7 @@ export default
   <div
   class="wrapper">
   <header>
-    <button class="close primary-three-button"></button>
+    <button class="close primary-three-button" @click="onCloseClick"></button>
     <button class="min primary-three-button"></button>
     <button class="max primary-three-button"></button>
   </header>
