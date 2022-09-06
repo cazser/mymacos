@@ -7,7 +7,9 @@ import Terminal from './Applications/Terminal.vue'
 // 我们后面再讨论嵌套路由。
 const routes = [
   { path: '/', component: HelloWorld },
-  {path:'/terminal', component: Terminal}  
+  {path:'/terminal', components:{
+    'terminal': Terminal
+  }}  
 ]
 
 // 3. 创建路由实例并传递 `routes` 配置
