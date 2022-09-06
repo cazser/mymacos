@@ -5,7 +5,7 @@ const props =defineProps({
  src: String,
  command: String,
  apps:Array,
- 
+ link:String
 })
 
 const onClick = (e)=>{
@@ -21,7 +21,7 @@ const onClick = (e)=>{
 
 <template>
   <div @click="onClick">
-    <router-link to="/terminal">
+    <router-link :to="props.link">
     <slot></slot>
     </router-link>
   </div>
