@@ -1,6 +1,7 @@
 import { createRouter, createWebHashHistory} from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
 import Terminal from './Applications/Terminal.vue'
+import Settings from './Applications/Settings.vue'
 
 // 2. 定义一些路由
 // 每个路由都需要映射到一个组件。
@@ -9,6 +10,9 @@ const routes = [
   { path: '/', component: HelloWorld },
   {path:'/terminal', components:{
     'terminal': Terminal
+  }},
+  {path:'/settings', components:{
+    'settings': Settings
   }}  
 ]
 

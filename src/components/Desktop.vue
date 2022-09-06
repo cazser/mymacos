@@ -36,8 +36,8 @@ onUnmounted(()=>{
 <ol class="appcontainer">
  <li v-for="app in apps">
   
-  <Application :parameters="app.parameter">
-    <router-view></router-view>  
+  <Application :parameter="app">
+    <router-view :name="app.link"></router-view>  
   </Application>
 </li>
 </ol>

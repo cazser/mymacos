@@ -8,7 +8,7 @@ export default
       setup:(props, context)=>{
       
       onMounted(()=>{
-      console.log(props);
+      console.log(props.parameter);
       })
       
       return {}
