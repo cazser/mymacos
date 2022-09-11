@@ -22,9 +22,7 @@ const onClick = (e)=>{
 
 <template>
   <div @click="onClick">
-    <router-link :to="props.link">
     <slot></slot>
-    </router-link>
   </div>
 </template>
 

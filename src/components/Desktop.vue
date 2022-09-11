@@ -30,14 +30,12 @@ onUnmounted(()=>{
     </span>
   </header>
   <Application >
-    <router-view name="terminal"></router-view>
   </Application>
   <Dock :apps=apps></Dock>
 <ol class="appcontainer">
  <li v-for="app in apps">
   
   <Application :parameter="app">
-    <router-view :name="app.link"></router-view>  
   </Application>
 </li>
 </ol>
