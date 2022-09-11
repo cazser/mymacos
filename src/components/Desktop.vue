@@ -1,6 +1,7 @@
 <script setup>
 import { onUnmounted, reactive, ref } from 'vue'
 import Terminal from '../Applications/Terminal.vue';
+import Test from './test/Test'
 import Dock from './Dock.vue'
 import Application from './Application.vue';
 const apps = reactive([]);
@@ -30,12 +31,14 @@ onUnmounted(()=>{
     </span>
   </header>
   <Application >
+    <Test/>
   </Application>
   <Dock :apps=apps></Dock>
 <ol class="appcontainer">
  <li v-for="app in apps">
   
   <Application :parameter="app">
+    <Test></Test>
   </Application>
 </li>
 </ol>
