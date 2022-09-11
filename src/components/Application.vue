@@ -8,7 +8,7 @@ export default
       setup:(props, context)=>{
       
       onMounted(()=>{
-      console.log(props.parameter);
+      console.log(props);
       })
       const onCloseClick =()=>{
         console.log("close.button")

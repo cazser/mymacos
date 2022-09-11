@@ -1,18 +1,31 @@
 <script setup>
-import { onUnmounted, reactive, ref } from 'vue'
+import { onMounted, onUnmounted, reactive, ref } from 'vue'
 import Terminal from '../Applications/Terminal.vue';
+import Settings from '../Applications/Settings.vue';
 import Test from './test/Test'
 import Dock from './Dock.vue'
 import Application from './Application.vue';
 const apps = reactive([]);
 let newDate = reactive(new Date());
 let intervalId = setInterval(()=>{
-  newDate = reactive(new Date());
+  newDate = new Date();
 
 }, 1000);
+onMounted(()=>{
+ setTimeout(() => {
+  currentTab.value = "Settings";
+ }, 5000); 
+})
 onUnmounted(()=>{
   window.clearInterval(intervalId)
 })
+const currentTab = ref('Terminal')
+
+const tabs = {
+  Terminal,
+  Settings,
+}
+
 </script>
 
 <template>
@@ -31,14 +44,15 @@ onUnmounted(()=>{
     </span>
   </header>
   <Application >
-    <Test/>
+    
+
   </Application>
   <Dock :apps=apps></Dock>
 <ol class="appcontainer">
  <li v-for="app in apps">
   
   <Application :parameter="app">
-    <Test></Test>
+      <component :is="tabs[app.link]" ></component>
   </Application>
 </li>
 </ol>
