@@ -1,8 +1,5 @@
 <script setup>
 import { onMounted, onUnmounted, reactive, ref } from 'vue'
-import Terminal from '../Applications/Terminal.vue';
-import Settings from '../Applications/Settings.vue';
-import Test from './test/Test'
 import Dock from './Dock.vue'
 import Application from './Application.vue';
 const apps = reactive([]);
@@ -19,12 +16,7 @@ onMounted(()=>{
 onUnmounted(()=>{
   window.clearInterval(intervalId)
 })
-const currentTab = ref('Terminal')
 
-const tabs = {
-  Terminal,
-  Settings,
-}
 
 </script>
 
