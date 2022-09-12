@@ -13,6 +13,7 @@ export default
       const onCloseClick =()=>{
         console.log("close.button")
       }      
+      
       return {
         onCloseClick
       }

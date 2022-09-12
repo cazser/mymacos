@@ -44,7 +44,7 @@ const tabs = {
     </span>
   </header>
   <Application >
-    
+ 
 
   </Application>
   <Dock :apps=apps></Dock>
@@ -52,7 +52,7 @@ const tabs = {
  <li v-for="app in apps">
   
   <Application :parameter="app">
-      <component :is="tabs[app.link]" ></component>
+      {{app.link}}
   </Application>
 </li>
 </ol>
