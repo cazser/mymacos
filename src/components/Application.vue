@@ -1,6 +1,7 @@
 <script>
 import { createApp, defineComponent } from 'vue';
 import { onMounted, ref } from 'vue'
+import Settings from '../Applications/Settings.vue';
 
 import Terminal from '../Applications/Terminal.vue';
 export default
@@ -10,7 +11,9 @@ export default
       
       onMounted(()=>{
         let app = createApp(Terminal);
-        app.mount("#terminal")
+        app.mount("#terminal");
+        let app1 = createApp(Settings);
+        app1.mount("#settings")
       })
       const onCloseClick =()=>{
         console.log("close.button")
