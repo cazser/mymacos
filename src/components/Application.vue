@@ -1,14 +1,16 @@
 <script>
-import { defineComponent } from 'vue';
+import { createApp, defineComponent } from 'vue';
 import { onMounted, ref } from 'vue'
-import { RouterView } from 'vue-router';
+
+import Terminal from '../Applications/Terminal.vue';
 export default
   
     {
       setup:(props, context)=>{
       
       onMounted(()=>{
-      console.log(props);
+        let app = createApp(Terminal);
+        app.mount("#terminal")
       })
       const onCloseClick =()=>{
         console.log("close.button")

@@ -52,7 +52,7 @@ const tabs = {
  <li v-for="app in apps">
   
   <Application :parameter="app">
-      {{app.link}}
+      <div :id="app.link"> </div>
   </Application>
 </li>
 </ol>
