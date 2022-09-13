@@ -2,6 +2,7 @@
 import { onMounted, onUnmounted, reactive, ref } from 'vue'
 import Dock from './Dock.vue'
 import Application from './Application.vue';
+import Test from './test/Test';
 const apps = reactive([]);
 let newDate = reactive(new Date());
 let intervalId = setInterval(()=>{
@@ -9,9 +10,7 @@ let intervalId = setInterval(()=>{
 
 }, 1000);
 onMounted(()=>{
- setTimeout(() => {
-  currentTab.value = "Settings";
- }, 5000); 
+  
 })
 onUnmounted(()=>{
   window.clearInterval(intervalId)
@@ -36,7 +35,9 @@ onUnmounted(()=>{
     </span>
   </header>
  
-
+  <Application>
+    <Test></Test>
+  </Application>
   <Dock :apps=apps></Dock>
 <ol class="appcontainer">
  <li v-for="app in apps">
