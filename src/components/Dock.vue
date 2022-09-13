@@ -1,7 +1,6 @@
 <script setup> 
 
-import Terminal from '../Applications/Terminal.vue'
-import Item from './Item.vue';
+import Link from './Link.vue'
 const props = defineProps({
 apps:Array
 })
@@ -16,34 +15,34 @@ const ondockClick = (e)=>{
 <template>
     <ol class="dock" @click="ondockClick">
       <li>
-        <Item :apps=apps link="finder">
+        <Link :apps=apps link="finder">
           <img src="../assets/finder.png"/>
-        </Item>
+        </Link>
       </li>
       <li>
-        <Item :apps=apps link="launchpad">
+        <Link :apps=apps link="launchpad">
           <img src="../assets/launchpad.png">
-        </Item>
+        </Link>
       </li>
       <li>
-        <Item :apps=apps link="mails">
+        <Link :apps=apps link="mails">
           <img src="../assets/mails.png">
-        </Item>
+        </Link>
       </li>
        <li>
-        <Item :apps=apps link="safari">
+        <Link :apps=apps link="safari">
           <img src="../assets/safari.png">
-        </Item>
+        </Link>
        </li>
        <li>
-        <Item :apps=apps link="settings">
+        <Link :apps=apps link="settings">
           <img src="../assets/settings.png">
-        </Item>
+        </Link>
        </li>
        <li>
-        <Item :apps=apps link="terminal">
+        <Link :apps=apps link="terminal">
           <img src="../assets/terminal.png">
-        </Item>
+        </Link>
        </li>
     </ol>
 </template>
