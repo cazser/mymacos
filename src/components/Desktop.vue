@@ -40,7 +40,7 @@ onUnmounted(()=>{
 <ol class="appcontainer">
  <li v-for="app in apps">
   
-  <Application :parameter="app">
+  <Application :appid="app.id" :parameter="app">
       <div :id="app.link"> </div>
   </Application>
 </li>

@@ -15,32 +15,32 @@ const ondockClick = (e)=>{
 <template>
     <ol class="dock" @click="ondockClick">
       <li>
-        <Link :apps=apps link="finder">
+        <Link  id="1" :apps=apps link="finder">
           <img src="../assets/finder.png"/>
         </Link>
       </li>
       <li>
-        <Link :apps=apps link="launchpad">
+        <Link id="2" :apps=apps link="launchpad">
           <img src="../assets/launchpad.png">
         </Link>
       </li>
       <li>
-        <Link :apps=apps link="mails">
+        <Link id="3" :apps=apps link="mails">
           <img src="../assets/mails.png">
         </Link>
       </li>
        <li>
-        <Link :apps=apps link="safari">
+        <Link id="4" :apps=apps link="safari">
           <img src="../assets/safari.png">
         </Link>
        </li>
        <li>
-        <Link :apps=apps link="settings">
+        <Link id="5" :apps=apps link="settings">
           <img src="../assets/settings.png">
         </Link>
        </li>
        <li>
-        <Link :apps=apps link="terminal">
+        <Link id="6" :apps=apps link="terminal">
           <img src="../assets/terminal.png">
         </Link>
        </li>

@@ -5,7 +5,8 @@ const props =defineProps({
  src: String,
  command: String,
  apps:Array,
- link:String
+ link:String,
+ id: String
 })
 
 const onClick = (e)=>{
@@ -14,7 +15,7 @@ const onClick = (e)=>{
   //console.log(context);
   console.log(props.link);
 
-  props.apps.push({parameters:11, link: props.link})
+  props.apps.push({id: props.id, parameters:11, link: props.link})
   console.log(props.apps[props.apps.length-1])
 }
 </script>

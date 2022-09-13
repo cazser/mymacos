@@ -13,7 +13,8 @@ export default
         initApp();
       })
       const onCloseClick =()=>{
-        console.log("close.button")
+        
+        console.log(props);
       }      
       
       return {
