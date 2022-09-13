@@ -1,19 +1,16 @@
 <script>
 import { createApp, defineComponent } from 'vue';
 import { onMounted, ref } from 'vue'
-import Settings from '../Applications/Settings.vue';
+import initApp from '../script/initApp';
 
-import Terminal from '../Applications/Terminal.vue';
+
 export default
   
     {
       setup:(props, context)=>{
       
       onMounted(()=>{
-        let app = createApp(Terminal);
-        app.mount("#terminal");
-        let app1 = createApp(Settings);
-        app1.mount("#settings")
+        initApp();
       })
       const onCloseClick =()=>{
         console.log("close.button")

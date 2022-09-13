@@ -35,9 +35,7 @@ onUnmounted(()=>{
     </span>
   </header>
  
-  <Application>
-    <Test></Test>
-  </Application>
+  
   <Dock :apps=apps></Dock>
 <ol class="appcontainer">
  <li v-for="app in apps">
