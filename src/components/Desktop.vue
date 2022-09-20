@@ -29,7 +29,7 @@ onUnmounted(()=>{
       <li>帮助</li>
     </ol>
     <span class="time">
-      {{newDate.getHours()>10? newDate.getHours(): 
+      {{newDate.getHours()>=10? newDate.getHours(): 
       '0'+ newDate.getHours()}}:{{newDate.getMinutes()>10?
        newDate.getMinutes(): '0'+newDate.getMinutes()}}
     </span>
@@ -39,10 +39,11 @@ onUnmounted(()=>{
   <Dock :apps=apps></Dock>
 <ol class="appcontainer">
  <li v-for="app in apps">
-  
+  <KeepAlive>
   <Application :appid="app.id" :parameter="app">
       <div :id="app.link"> </div>
   </Application>
+  </KeepAlive>
 </li>
 </ol>
 </div> 

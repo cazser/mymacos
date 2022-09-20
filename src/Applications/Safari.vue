@@ -5,7 +5,7 @@ import { onMounted, ref } from 'vue';
 defineProps({
   msg: String
 })
-const url = ref("111")
+const url = ref("")
 const iframe = ref(null);
 onMounted(()=>{
   console.log(iframe);
@@ -39,7 +39,7 @@ const onSubmit=()=>{
   display: flex;
   flex-direction: column;
   padding: 10px;
-  min-height: 80vh;
+  min-height: 100vh;
 }
 
 .safariinput{
