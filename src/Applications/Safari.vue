@@ -11,17 +11,25 @@ onMounted(()=>{
   console.log(iframe);
 })
 
-const onSubmit=()=>{
+const onSubmit=(e)=>{
   //console.log('提交')
   //console.log( iframe.value);
+
+
   iframe.value.src=url.value;
+}
+const onInput = (e)=>{
+  //console.log(e.key);
+  if(e.key==='Enter'){
+    onSubmit();
+  }
 }
 </script>
 
 <template>
   <div class="wrapper">
     <div>
-      <input  class="safariinput" v-model="url"/>
+      <input  @keyup="onInput" class="safariinput" @input="onInput" v-model="url"/>
       <button @click="onSubmit">提交</button>
     </div>
     <iframe ref="iframe" class="mainframe">
